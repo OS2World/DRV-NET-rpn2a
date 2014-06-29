@@ -1,0 +1,92 @@
+[RPN2A]
+Type = NDIS
+Title = "Realtek RTL8029AS Another MAC driver"
+Version = 2.01
+DriverName = RPN2A$
+Xports = NETBEUI, LANDD
+
+[FILE]
+Name = RPN2A.OS2
+Path = IBMCOM\MACS
+
+
+[SLOT]
+display = "Slot Number of the Adapter"
+type = decimal
+;default = "0"
+optional = yes
+range = 0-7
+help = "SLOT=n, n=0..7 specifies the PCI SLOT index number 
+to look for the adapter. PCI SLOT index starts 0. Default is 0. 
+This isn't required unless there are multiple adapters."
+
+
+[TXQUEUE]
+display = "TX buffer count"
+type = decimal
+;dafault = 2
+optional = yes
+editable = yes
+range = 1-4
+help = "TXQUEUE=n, n=1..4, specifies the number of the buffers 
+whitch is reserved by the driver. The default value is 2."
+
+
+[LTXQUEUE]
+display = "Logical TX queue count"
+type = decimal
+;dafault = 6
+optional = yes
+editable = yes
+range = 2-8
+help = "LTXQUEUE=n, n=2..8, specifies the number of transmits  
+which can be queued up by the driver. The default value is 6."
+
+
+[DUPLEX]
+display = "Duplex Mode Select"
+type = string
+strlength = 4
+;dafault = HALF
+optional = yes
+editable = yes
+set = HALF,FULL
+help = "DUPLEX=str, specifies the medium duplex mode. 
+The default string is HALF."
+
+
+[PAUSE]
+display = "MAC Control PAUSE enable"
+type = string
+strlength = 4
+;dafault = NO
+optional = yes
+editable = yes
+set = NO,YES
+help = "PAUSE=str, specifies the flow control ability. 
+The default string is NO."
+
+
+[IRQ15OVR]
+display = "Accept IRQ level > 15"
+type = string
+strlength = 4
+;default = NO
+optional = yes
+set = YES,NO
+help = "IRQ15OVR=str, specifies that the range of the acceptable 
+IRQ level is either [0..15] or [0..255]. If YES is specified, 
+the range is [0..255](no range check). The default string is NO."
+
+
+[NETADDRESS]
+tag = NETADDRESS
+display = "Network adapter address"
+type = hexstring
+strlength = 12
+optional = yes
+editable = yes
+help = "NETADDRESS alternates the MAC address of the adapter 
+with the one fixed in the hardware(in the EEPROM)."
+
+

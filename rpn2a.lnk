@@ -1,0 +1,59 @@
+=========================================================
+Realtek RTL8029AS OS/2 NDIS 2.0.1 Another MAC driver 1.01
+=========================================================
+
+1.Introduction
+
+RTL8029AS is a NE2000 compatlble PCI Ethernet chip.
+I want to say that you should throw it into the trash can:-)
+
+Included files are:
+rpn2a.os2	NDIS 2.0.1 MAC driver
+rpn2a.nif	Network Information File
+rpn2a.sym	Symbol Map file
+rpn2a.lnk	Document (this file)
+source.zip	source files
+
+You could download the latest file on the gomi:NDIS MAC Drivers page,
+URL http://www.os2warp.be/index2.php?name=gomindis .
+
+
+2.No Warranty
+
+This code is provided 'AS IS' and any warranties are disclaimed.
+
+
+3.Redistribution with modification
+
+Your should add your copyright notice, 
+"(c)Copyright 2006 your name. All rights reserved."
+and remove mine (if it exists),
+"(c)Copyright 2006 chagrin. Some rights reserved."
+
+This means that the modified binary/source is not mine, but yours, 
+regardless of the degree of the modification. 
+You can redistribute, of course, that for the commercial purpose 
+without any fee to me, without releasing the source, if you want.
+
+Don't forget that I'm never liable for your product.
+(You, also, should add a disclaimer.)
+
+
+4.History
+
+ver.1.01 - 01/13, 2006.
+- Bugfix: Trap in TransferDate.
+- 1 new keyword, IRQ15OVR, was added.
+- First publication on os2warp.be.
+
+ver.1.00 - 08/01, 2005.
+-  Initial release. Based on lgy98.os2 1.00.
+
+
+5.Contact to the author
+
+Access os2warp.be Technical Support Center,
+URL http://www.os2warp.be/support/
+ or
+Email to YANAGIHARA Nobuyuki,
+ <VYL00513@nifty.ne.jp>
